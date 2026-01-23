@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My notes 2026</title>
+    <style>
+        .note-card { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 8px; }
+        .category-badge { background: #eee; padding: 2px 5px; font-size: 0.8em; }
+        .btn-add { background: green; color: white; padding: 10px; text-decoration: none; display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1>My notes</h1>
+    <a href="{% url 'note_create' %}" class="btn-add">+ Add new note</a>
+
+    {% for note in notes %}
+        <div class="note-card">
+            <h3><a href="{% url 'note_edit' note.pk %}">{{ note.title }}</a></h3>
+            <p>{{ note.text|truncatewords:20 }}</p>
+            <span class="category-badge">Category: {{ note.get_category_display }}</span>
+            {% if note.reminder %}
+                <p><small>Reminder: {{ note.reminder }}</small></p>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>No notes yet</p>
+    {% endfor %}
+</body>
+</html>

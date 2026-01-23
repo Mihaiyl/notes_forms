@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Note delete</title>
+</head>
+<body>
+    <h1>Delete this note?</h1>
+
+    <p>Are you sure to delete this note? <strong>"{{ object.title }}"</strong>?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" style="background: red; color: white; padding: 10px; border: none; cursor: pointer;">
+            Yes
+        </button>
+        <a href="{% url 'note_edit' object.pk %}" style="margin-left: 15px;">Cancel</a>
+    </form>
+</body>
+</html>
