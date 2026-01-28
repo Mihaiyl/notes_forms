@@ -9,7 +9,7 @@ class Category(models.TextChoices):
 
 class Note(models.Model):
     title = models.CharField(max_length=200, verbose_name="Name")
-    text = models.TextField(verbose_name="Note text")
+    text = models.TextField(verbose_name="Note text", null=True, blank=True)
     reminder = models.DateTimeField(null=True, blank=True, verbose_name="Reminder")
     category = models.CharField(
         max_length=3,
