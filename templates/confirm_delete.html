@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
 <html lang="en">
 <head>
     <title>Note delete</title>
@@ -12,9 +17,6 @@
         {% csrf_token %}
         <button type="submit" style="background: red; color: white; padding: 10px; border: none; cursor: pointer;">Yes</button>
         <a href="{% url 'note_list' %}" type="submit" style="background: darkgray; text-decoration: none; color: white; padding: 10px; border: none; cursor: pointer;">No</a>
-        {% load django_bootstrap5 %}
-        {% bootstrap_css %}
-        {% bootstrap_javascript %}
     </form>
 </body>
 </html>

@@ -10,7 +10,7 @@
         input, textarea, select {
             width: 100%; padding: 8px; border: 1px solid #dee2e6; border-radius: 6px; display: block; margin-bottom: 10px;
         }
-        input:invalid, textarea:invalid { border-color: #dc3545; }
+        input:invalid, textarea:invalid { border-color: #dc3545;}
         input:valid, textarea:valid { border-color: #198754; }
     </style>
 </head>
@@ -32,6 +32,7 @@
 
                <div class="d-grid gap-2 mt-4">
                    <button type="submit" style="background: #198754; border: none; color: white; padding: 5px 10px;">Save</button>
+
                    {% if object %}
                    <a href="{% url 'note_delete' object.pk %}" class="text-center d-block" style="background: #dc3545; color: white; padding: 5px 10px; text-decoration: none ">Delete</a>
                    {% endif %}
@@ -39,7 +40,8 @@
                    <a href="{% url 'note_list' %}" class="small text-muted text-decoration-none mt-2">← Back</a>
                     {% load django_bootstrap5 %}
                     {% bootstrap_css %}
-                    {% bootstrap_javascript %}
+                    {% bootstrap_javascript%}
+               </div>
             </form>
         </div>
     </div>
