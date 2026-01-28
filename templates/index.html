@@ -1,28 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <title>My notes 2026</title>
-    <style>
-        .note-card { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 8px; }
-        .category-badge { background: #eee; padding: 2px 5px; font-size: 0.8em; }
-        .btn-add { background: green; color: white; padding: 10px; text-decoration: none; display: inline-block; }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notes 2026</title>
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
 </head>
-<body>
-    <h1>My notes</h1>
-    <a href="{% url 'note_create' %}" class="btn-add">+ Add new note</a>
-
-    {% for note in notes %}
-        <div class="note-card">
-            <h3><a href="{% url 'note_edit' note.pk %}">{{ note.title }}</a></h3>
-            <p>{{ note.text|truncatewords:20 }}</p>
-            <span class="category-badge">Category: {{ note.get_category_display }}</span>
-            {% if note.reminder %}
-                <p><small>Reminder: {{ note.reminder }}</small></p>
-            {% endif %}
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark mb-4 shadow-sm">
+        <div class="container">
+            <a href="{% url 'note_create' %}" style="color: white; text-decoration: none;" class="btn btn-success btn-sm">+ Add new Note</a>
         </div>
-    {% empty %}
-        <p>No notes yet</p>
-    {% endfor %}
+    </nav>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+            {% for note in notes %}
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5><a href="{% url 'note_edit' note.pk %}" class="text-decoration-none">{{ note.title }}</a></h5>
+                        <p class="small text-muted">{{ note.text|truncatewords:15 }}</p>
+                        <span class="badge bg-secondary">Category: {{ note.get_category_display }}</span>
+                        {% if note.reminder %}<div class="mt-2 small text-danger">⏰ {{ note.reminder }}</div>{% endif %}
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-center w-100">No notes yet.</p>
+            {% endfor %}
+            {% load django_bootstrap5 %}
+            {% bootstrap_css %}
+            {% bootstrap_javascript %}
+        </div>
+    </div>
 </body>
 </html>

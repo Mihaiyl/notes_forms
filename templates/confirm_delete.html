@@ -6,14 +6,15 @@
 <body>
     <h1>Delete this note?</h1>
 
-    <p>Are you sure to delete this note? <strong>"{{ object.title }}"</strong>?</p>
+    <p>Are you sure to delete note <strong>"{{ object.title }}"</strong>?</p>
 
     <form method="post">
         {% csrf_token %}
-        <button type="submit" style="background: red; color: white; padding: 10px; border: none; cursor: pointer;">
-            Yes
-        </button>
-        <a href="{% url 'note_edit' object.pk %}" style="margin-left: 15px;">Cancel</a>
+        <button type="submit" style="background: red; color: white; padding: 10px; border: none; cursor: pointer;">Yes</button>
+        <a href="{% url 'note_list' %}" type="submit" style="background: darkgray; text-decoration: none; color: white; padding: 10px; border: none; cursor: pointer;">No</a>
+        {% load django_bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
     </form>
 </body>
 </html>
