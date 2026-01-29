@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript%}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
+    <style>
+        input {
+            width: 100%; padding: 8px; border: 1px solid #dee2e6; border-radius: 6px; display: block; margin-bottom: 10px;
+        }
+        form label {
+            margin-bottom: 5px;
+        }
+        input:invalid { border-color: #dc3545; }
+        input:valid { border-color: #198754; }
+    </style>
+</head>
+<body class="bg-light p-5">
+    <div class="container" style="max-width: 450px;">
+        <div class="card shadow-sm p-4">
+            <h3 class="text-center mb-4">Login</h3>
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="d-grid gap-2 mt-4">
+                   <button type="submit" style="background: #198754; border: none; color: white; padding: 10px; border-radius: 6px;">
+                       Confirm
+                   </button>
+               </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

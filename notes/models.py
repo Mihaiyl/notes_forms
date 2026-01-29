@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 
@@ -8,6 +9,7 @@ class Category(models.TextChoices):
     OTHER = 'OTH', 'Etc'
 
 class Note(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, verbose_name="Name")
     text = models.TextField(verbose_name="Note text", null=True, blank=True)
     reminder = models.DateTimeField(null=True, blank=True, verbose_name="Reminder")

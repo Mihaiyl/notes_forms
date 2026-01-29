@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,14 @@
     <nav class="navbar navbar-dark bg-dark mb-4 shadow-sm">
         <div class="container">
             <a href="{% url 'note_create' %}" style="color: white; text-decoration: none;" class="btn btn-success btn-sm">+ Add new Note</a>
+              {% if user.is_authenticated %}
+                  <form action="{% url 'logout' %}" method="post">
+                      {% csrf_token %}
+                      <button type="submit" class="btn btn-dark d-flex align-items-center justify-content-center gap-2"><strong>Logout</strong>({{ user.username }})</button>
+                  </form>
+              {% else %}
+                  <a href="{% url 'login' %}" class="btn btn-dark d-flex align-items-center justify-content-center gap-2"><strong>Login</strong></a>
+              {% endif %}
         </div>
     </nav>
 

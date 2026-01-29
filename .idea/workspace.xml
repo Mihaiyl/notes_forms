@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8ad958d-6a60-4088-9eb9-03e5028ec103" name="Changes" comment="Note">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/confirm_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -49,32 +54,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.DjangoProject.executor": "Run",
-    "Django tests.Test: notes.test.test_forms.NoteFormTest.executor": "Run",
-    "Django tests.Test: notes.test.test_models.NoteModelTest.executor": "Run",
-    "Django tests.Test: notes.test.test_views.NoteViewsTest.executor": "Run",
-    "Django tests.Test: notes.tests.test_models.NoteModelTest.executor": "Run",
-    "Django tests.Test: notes.tests.test_models.NoteModelTest.test_note_str_method.executor": "Run",
-    "Django tests.Test: notes.testsa.test_models.NoteModelTest.executor": "Run",
-    "Django tests.Test: notes.testsa.test_models.NoteModelTest.test_note_str_method.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.DjangoProject.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: notes.test.test_forms.NoteFormTest.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: notes.test.test_models.NoteModelTest.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: notes.test.test_views.NoteViewsTest.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: notes.tests.test_models.NoteModelTest.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: notes.tests.test_models.NoteModelTest.test_note_str_method.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: notes.testsa.test_models.NoteModelTest.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: notes.testsa.test_models.NoteModelTest.test_note_str_method.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\django_project\DjangoProject\templates\registration" />
+    </key>
+  </component>
   <component name="RunManager" selected="Django Server.DjangoProject">
     <configuration name="Test: notes.test.test_forms.NoteFormTest" type="DjangoTestsConfigurationType" temporary="true">
       <module name="Notes_forms" />
@@ -234,7 +245,8 @@
       <workItem from="1769162727290" duration="959000" />
       <workItem from="1769163735114" duration="3597000" />
       <workItem from="1769167448501" duration="879000" />
-      <workItem from="1769619648042" duration="3599000" />
+      <workItem from="1769619648042" duration="5810000" />
+      <workItem from="1769690974714" duration="6378000" />
     </task>
     <task id="LOCAL-00001" summary="Note">
       <option name="closed" value="true" />
@@ -252,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769168153224</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Note">
+      <option name="closed" value="true" />
+      <created>1769623412032</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769623412032</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

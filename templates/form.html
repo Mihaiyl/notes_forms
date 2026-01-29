@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
@@ -10,7 +10,7 @@
         input, textarea, select {
             width: 100%; padding: 8px; border: 1px solid #dee2e6; border-radius: 6px; display: block; margin-bottom: 10px;
         }
-        input:invalid, textarea:invalid { border-color: #dc3545;}
+        input:invalid, textarea:invalid { border-color: #dc3545; }
         input:valid, textarea:valid { border-color: #198754; }
     </style>
 </head>
@@ -18,7 +18,7 @@
     <nav class="navbar navbar-dark bg-dark mb-4 shadow-sm">
         <div class="container">
             <a class="navbar-brand" style="color: #6495ED; text-decoration: none;" href="{% url 'note_list' %}">📘 MyNotes</a>
-           <a href="https://github.com/Mihaiyl/notes_forms" target="_blank" class="btn btn-dark d-flex align-items-center justify-content-center gap-2"><i class="fa-brands fa-github"></i> GitHub </a>
+            <a href="https://github.com/Mihaiyl/notes_forms" target="_blank" class="btn btn-dark d-flex align-items-center justify-content-center gap-2"><i class="fa-brands fa-github"></i> GitHub </a>
         </div>
     </nav>
 
@@ -38,9 +38,9 @@
                    {% endif %}
 
                    <a href="{% url 'note_list' %}" class="small text-muted text-decoration-none mt-2">← Back</a>
-                    {% load django_bootstrap5 %}
-                    {% bootstrap_css %}
-                    {% bootstrap_javascript%}
+                   {% load django_bootstrap5 %}
+                   {% bootstrap_css %}
+                   {% bootstrap_javascript%}
                </div>
             </form>
         </div>
