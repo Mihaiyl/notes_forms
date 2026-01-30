@@ -24,7 +24,7 @@
 
     <div class="container" style="max-width: 450px;">
         <div class="card shadow-sm p-4">
-            <h3 class="text-center mb-4">{% if object %}Edit Note{% else %}New Note{% endif %}</h3>
+            <h3 class="text-center mb-4">{% if note %}Edit Note{% else %}New Note{% endif %}</h3>
 
             <form method="post">
                 {% csrf_token %}
